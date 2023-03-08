@@ -2,7 +2,7 @@
 A simple Tetris Game using Pygame. Was a lot of fun to make. Part of something [Bigger](https://github.com/KrishnarajT/PuzzleLists).
 
 # Screenshots
-![](https://github.com/KrishnarajT/Tetris/blob/master/Screenshots/tetris.gif)
+![](https://github.com/KrishnarajT/Tetris/blob/main/screenshots/tetris.gif)
 
 # Installation for Tinkering
 1. Clone the repository
