@@ -1,11 +1,15 @@
-# This file contains constants relating to the entire game. 
+# This file contains constants relating to the entire game.
 import pygame as pg
+import os
 
 vec = pg.math.Vector2
+from pathlib import Path
 
+ROOT_DIR = str(Path(__file__).parent)
+print(ROOT_DIR)
 # Constants
-WIDTH = 1280
-HEIGHT = 720
+WIDTH = 750
+HEIGHT = 900
 FPS = 30
 
 # Tetris Constants
@@ -21,24 +25,24 @@ FIELD_BG_COLOR = pg.Color("#000000")
 INITIAL_OFFSET = vec(FIELD_WIDTH // 2, -1)
 
 MOVE_DIRECTIONS = {
-    'left': vec(-1, 0),
-    'right': vec(1, 0),
-    'down': vec(0, 1),
+    "left": vec(-1, 0),
+    "right": vec(1, 0),
+    "down": vec(0, 1),
 }
 
 TETROMINOES = {
-    'T': [(0, 0), (-1, 0), (1, 0), (0, -1)],
-    'O': [(0, 0), (0, -1), (1, 0), (1, -1)],
-    'J': [(0, 0), (-1, 0), (0, -1), (0, -2)],
-    'L': [(0, 0), (1, 0), (0, -1), (0, -2)],
-    'I': [(0, 0), (0, 1), (0, -1), (0, -2)],
-    'S': [(0, 0), (-1, 0), (0, -1), (1, -1)],
-    'Z': [(0, 0), (1, 0), (0, -1), (-1, -1)],
+    "T": [(0, 0), (-1, 0), (1, 0), (0, -1)],
+    "O": [(0, 0), (0, -1), (1, 0), (1, -1)],
+    "J": [(0, 0), (-1, 0), (0, -1), (0, -2)],
+    "L": [(0, 0), (1, 0), (0, -1), (0, -2)],
+    "I": [(0, 0), (0, 1), (0, -1), (0, -2)],
+    "S": [(0, 0), (-1, 0), (0, -1), (1, -1)],
+    "Z": [(0, 0), (1, 0), (0, -1), (-1, -1)],
 }
 
 # Animation Constants
-ANIM_TIME_INTERVAL = 500 # milliseconds
-FAST_ANIM_INTERVAL = 50 # milliseconds
+ANIM_TIME_INTERVAL = 500  # milliseconds
+FAST_ANIM_INTERVAL = 50  # milliseconds
 
 # Sprite Constants
-SPRITE_DIR_PATH = 'design/sprites'
+SPRITE_DIR_PATH = os.path.join(ROOT_DIR, "design/sprites/")
